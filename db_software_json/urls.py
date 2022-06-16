@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from software_app.views import SoftwareListView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('software/', SoftwareListView.as_view(), name='software')
 ]
