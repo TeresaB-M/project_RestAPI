@@ -6,4 +6,4 @@ class SoftwareSerializer(serializers.ModelSerializer):
     """Serializing all the Software"""
     class Meta:
         model = Software
-        fields = ('name', 'description')
+        fields = ('id', 'name', 'description')
