@@ -44,6 +44,11 @@ class TypeOfSoftwareListView(generics.ListCreateAPIView):
     serializer_class = TypeOfSoftwareSerializer
 
 
+class TypeOfSoftwareView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = TypeOfSoftware.objects.all()
+    serializer_class = TypeOfSoftwareSerializer
+
+
 class MySoftwareListView(generics.ListCreateAPIView):
     queryset = MySoftware.objects.all()
     serializer_class = MySoftwareSerializer
