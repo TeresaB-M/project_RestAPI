@@ -16,7 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from software_app.views import SoftwareListView, PersonListView, PersonView, SortOfSoftwareListView, SortOfSoftwareView
+from software_app.views import (
+    SoftwareListView,
+    PersonListView,
+    PersonView,
+    SortOfSoftwareListView,
+    SortOfSoftwareView,
+    TypeOfSoftwareListView,
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +32,5 @@ urlpatterns = [
     path('person/<int:pk>/', PersonView.as_view()),
     path('sortofsoftware_list/', SortOfSoftwareListView.as_view(), name='sortofsoftware_list'),
     path('sortofsoftware/<int:pk>/', SortOfSoftwareView.as_view()),
+    path('typeofsoftware_list/', TypeOfSoftwareListView.as_view(), name='typeofsoftware_list'),
 ]

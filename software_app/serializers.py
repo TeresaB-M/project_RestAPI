@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from software_app.models import Software, Person, SortOfSoftware
+from software_app.models import Software, Person, SortOfSoftware, TypeOfSoftware
 
 
 class SoftwareSerializer(serializers.ModelSerializer):
@@ -19,3 +19,9 @@ class SortOfSoftwareSerializer(serializers.ModelSerializer):
     class Meta:
         model = SortOfSoftware
         fields = ('id', 'name', 'description_sort')
+
+
+class TypeOfSoftwareSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TypeOfSoftware
+        fields = ('id', 'name', 'description_type')
