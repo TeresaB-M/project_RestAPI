@@ -31,3 +31,8 @@ class PersonView(generics.RetrieveUpdateDestroyAPIView):
 class SortOfSoftwareListView(generics.ListCreateAPIView):
     queryset = SortOfSoftware.objects.all()
     serializer_class = SortOfSoftwareSerializer
+
+
+class SortOfSoftwareView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = SortOfSoftware.objects.all()
+    serializer_class = SortOfSoftwareSerializer
