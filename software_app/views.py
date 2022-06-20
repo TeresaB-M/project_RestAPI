@@ -52,3 +52,8 @@ class TypeOfSoftwareView(generics.RetrieveUpdateDestroyAPIView):
 class MySoftwareListView(generics.ListCreateAPIView):
     queryset = MySoftware.objects.all()
     serializer_class = MySoftwareSerializer
+
+
+class NySoftwareView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = MySoftware.objects.all()
+    serializer_class = MySoftwareSerializer
