@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from software_app.models import Software
+from software_app.models import Software, Person
 
 
 class SoftwareSerializer(serializers.ModelSerializer):
@@ -7,3 +7,9 @@ class SoftwareSerializer(serializers.ModelSerializer):
     class Meta:
         model = Software
         fields = ('id', 'name', 'description')
+
+
+class PersonSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Person
+        fields = ('id', 'name', 'surname', 'email')
