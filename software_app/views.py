@@ -1,7 +1,7 @@
 from rest_framework import generics
 
-from software_app.models import Software, Person
-from software_app.serializers import SoftwareSerializer, PersonSerializer
+from software_app.models import Software, Person, SortOfSoftware
+from software_app.serializers import SoftwareSerializer, PersonSerializer, SortOfSoftwareSerializer
 
 
 class SoftwareListView(generics.ListCreateAPIView):
@@ -26,3 +26,8 @@ class PersonListView(generics.ListCreateAPIView):
 class PersonView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
+
+
+class SortOfSoftwareListView(generics.ListCreateAPIView):
+    queryset = SortOfSoftware.objects.all()
+    serializer_class = SortOfSoftwareSerializer
