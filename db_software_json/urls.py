@@ -20,8 +20,8 @@ from software_app.views import SoftwareListView, PersonListView, PersonView, Sor
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('software/', SoftwareListView.as_view(), name='software'),
-    path('person/', PersonListView.as_view(), name='person'),
+    path('software_list/', SoftwareListView.as_view(), name='software_list'),
+    path('person_list/', PersonListView.as_view(), name='person_list'),
     path('person/<int:pk>/', PersonView.as_view()),
-    path('sortofsoftware/', SortOfSoftwareListView.as_view(), name='sortofsoftware'),
+    path('sortofsoftware_list/', SortOfSoftwareListView.as_view(), name='sortofsoftware_list'),
 ]
