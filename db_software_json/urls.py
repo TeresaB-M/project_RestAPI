@@ -23,6 +23,7 @@ from software_app.views import (
     SortOfSoftwareListView,
     SortOfSoftwareView,
     TypeOfSoftwareListView,
+    MySoftwareListView,
 )
 
 urlpatterns = [
@@ -33,4 +34,5 @@ urlpatterns = [
     path('sortofsoftware_list/', SortOfSoftwareListView.as_view(), name='sortofsoftware_list'),
     path('sortofsoftware/<int:pk>/', SortOfSoftwareView.as_view()),
     path('typeofsoftware_list/', TypeOfSoftwareListView.as_view(), name='typeofsoftware_list'),
+    path('mysoftware_list/', MySoftwareListView.as_view(), name='mysoftware_list'),
 ]

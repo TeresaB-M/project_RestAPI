@@ -1,8 +1,8 @@
 from rest_framework import generics
 
-from software_app.models import Software, Person, SortOfSoftware, TypeOfSoftware
+from software_app.models import Software, Person, SortOfSoftware, TypeOfSoftware, MySoftware
 from software_app.serializers import SoftwareSerializer, PersonSerializer, SortOfSoftwareSerializer
-from software_app.serializers import TypeOfSoftwareSerializer
+from software_app.serializers import TypeOfSoftwareSerializer, MySoftwareSerializer
 
 
 class SoftwareListView(generics.ListCreateAPIView):
@@ -42,3 +42,8 @@ class SortOfSoftwareView(generics.RetrieveUpdateDestroyAPIView):
 class TypeOfSoftwareListView(generics.ListCreateAPIView):
     queryset = TypeOfSoftware.objects.all()
     serializer_class = TypeOfSoftwareSerializer
+
+
+class MySoftwareListView(generics.ListCreateAPIView):
+    queryset = MySoftware.objects.all()
+    serializer_class = MySoftwareSerializer
