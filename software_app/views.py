@@ -19,6 +19,10 @@ class PersonListView(generics.ListCreateAPIView):
     def get_serializer_class(self):
         return PersonSerializer
 
-
     def get(self, request):
         return self.list(request)
+
+
+class PersonView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Person.objects.all()
+    serializer_class = PersonSerializer
