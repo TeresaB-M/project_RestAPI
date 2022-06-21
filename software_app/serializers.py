@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from software_app.models import Software, Person, SortOfSoftware, TypeOfSoftware, MySoftware, SoftRequest
+from software_app.models import Software, Person, SortOfSoftware, TypeOfSoftware, MySoftware, SoftRequest, \
+    BorrowSoftware
 
 
 class SoftwareSerializer(serializers.ModelSerializer):
@@ -36,4 +37,10 @@ class MySoftwareSerializer(serializers.ModelSerializer):
 class SoftRequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = SoftRequest
+        fields = '__all__'
+
+
+class BorrowSoftwareSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BorrowSoftware
         fields = '__all__'

@@ -27,6 +27,7 @@ from software_app.views import (
     TypeOfSoftwareView,
     MySoftwareView,
     SoftRequestListView,
+    BorrowSoftwareListView,
 )
 
 urlpatterns = [
@@ -41,4 +42,5 @@ urlpatterns = [
     path('mysoftware_list/', MySoftwareListView.as_view(), name='mysoftware_list'),
     path('mysoftware/<int:pk>/', MySoftwareView.as_view()),
     path('softrequest_list/', SoftRequestListView.as_view(), name='softrequest_list'),
+    path('borrowsoftware_list/', BorrowSoftwareListView.as_view(), name='borrowsoftware_list'),
 ]
